@@ -12,7 +12,7 @@ if __name__ == "__main__":
         arg = "arguments"
     
     i = 1
-    print("{} {}{}".format(num, arg, punc))
+    print("{} {}{}".format(num, arg, punc), end='')
     for i in argv[1:]:
         print ("{}: {}".format(i, argv[i]))
         i += 1 
