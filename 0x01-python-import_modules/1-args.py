@@ -14,5 +14,5 @@ if __name__ == "__main__":
     i = 1
     print("{} {}{}".format(num, arg, punc))
     for i in argv[1:]:
-        print ("{}: {}".format(count, argv[i]))
+        print ("{}: {}".format(i, argv[i]))
         i += 1 
