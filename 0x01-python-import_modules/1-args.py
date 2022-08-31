@@ -13,6 +13,6 @@ if __name__ == "__main__":
     
     i = 1
     print("{} {}{}".format(num, arg, punc))
-    for i in range argv[1:]:
+    for i in argv[1:]:
         print ("{}: {}".foramt(count, arrgv[i]))
         i += 1 
