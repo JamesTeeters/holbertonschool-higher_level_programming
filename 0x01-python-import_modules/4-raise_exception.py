@@ -2,4 +2,4 @@
 def raise_exception():
     a = "hello"
     b = 7
-    sum = a * b
+    c = a * b
