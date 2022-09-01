@@ -7,4 +7,4 @@ def no_c(my_string):
         while 'C' in my_list:
             my_list.remove('C')
         my_string = ''.join(str(i) for i in my_list)
-        return my_string
+    return my_string
