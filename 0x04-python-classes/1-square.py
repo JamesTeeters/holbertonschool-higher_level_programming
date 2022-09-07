@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Raising exceptions for Square"""
+
+
 class Square:
     """created class Square"""
     def __init__(self, size=0):

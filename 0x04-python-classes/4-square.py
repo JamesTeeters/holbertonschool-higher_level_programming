@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """added method area"""
+
+
 class Square:
     """Created class Square"""
     def __init__(self, size=0):
