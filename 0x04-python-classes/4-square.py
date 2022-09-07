@@ -25,7 +25,7 @@ class Square:
             raise TypeError("size must be integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-    
+
     def my_print(self):
         if self.__size <= 0:
             print()
