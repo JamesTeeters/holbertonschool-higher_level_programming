@@ -1,6 +1,6 @@
-""" Tests for add function """
+Tests for add function
 
-""" Import add function file """
+
 >>>add_integer = __import__('0-add_integer').add_integer
 
 >>>add_integer(7, 4)
