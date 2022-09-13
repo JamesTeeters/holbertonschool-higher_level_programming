@@ -3,6 +3,7 @@
 Make a Rectangle
 """
 
+
 class Rectangle:
     """Created Rectangle Class"""
     def __init__(self, width=0, height=0):
@@ -30,7 +31,8 @@ class Rectangle:
     def __str__(self):
         if self.__height <= 0 or self.__width <= 0:
             return ""
-        return (("#" * self.__width + "\n") * (self.__height -1) + ("#" * self.width))
+        return(("#" * self.__width + "\n") *
+(self.__height - 1) + ("#" * self.width))
 
     @property
     def width(self):
