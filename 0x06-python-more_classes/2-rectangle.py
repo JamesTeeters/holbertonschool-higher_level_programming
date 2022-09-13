@@ -27,14 +27,10 @@ class Rectangle:
         else:
             return (self.__width + self.__height) * 2
 
-    def my_print(self):
-        for i in range(self.__height):
-            print ("#" * self.__width)
-
     def __str__(self):
         if self.__height <= 0 or self.__width <= 0:
             return ""
-        return str(self.my_print())
+        return (("#" * self.__width + "\n") * (self.__height -1) + ("#" * self.width))
 
     @property
     def width(self):
