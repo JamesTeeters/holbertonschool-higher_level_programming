@@ -1,6 +1,7 @@
 #!/bin/usr/python3
 """Python Tests"""
 
+
 def add_integer(a, b=98):
     """add integers"""
     if not isinstance(a, (int, float)):
