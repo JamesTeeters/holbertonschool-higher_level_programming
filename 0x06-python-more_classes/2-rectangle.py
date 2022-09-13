@@ -31,8 +31,8 @@ class Rectangle:
     def __str__(self):
         if self.__height <= 0 or self.__width <= 0:
             return ""
-        return(("#" * self.__width + "\n") *
-(self.__height - 1) + ("#" * self.width))
+        str = ("{}\n".format("#" * self.__width) * self.__height)
+        return str[:-1]
 
     @property
     def width(self):
