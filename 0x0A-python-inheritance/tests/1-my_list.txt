@@ -11,8 +11,3 @@
 [-4, 2, 3, 5, 123]
 >>> print(my_list)
 [123, -4, 2, 3, 5]
->>> lst = []
->>> lst.print_sorted()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AttributeError: 'list' object has no attribute 'print_sorted'
