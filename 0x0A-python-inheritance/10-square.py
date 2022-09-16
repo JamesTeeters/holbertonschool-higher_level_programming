@@ -2,20 +2,13 @@
 """inheritance"""
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Rectangle(BaseGeometry):
-    """subclass of BaseGeometry"""
-    def __init__(self, width, height):
-        """attributes of rectangle"""
-        self.integer_validator("width", width)
-        self.width = width
-        self.integer_validator("height", height)
-        self.height = height
-
+class Square(Rectangle):
+    """made a square class"""
+    def __init__(self, size):
+        self.integer_validator(size)
+        self.size = size
     def area(self):
-        return self.width * self.height
-
-    def __str__(self):
-        return "[Rectangle] {}/{}".format(self.width, self.height)
+        return self.size * self.size
