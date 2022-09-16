@@ -32,10 +32,12 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """Subclass of Rectangle"""
     def __init__(self, size):
+        """attributes of square"""
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.size = size
-    
+
     def area(self):
         return self.size * self.size
