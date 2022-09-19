@@ -12,10 +12,10 @@ class Student:
 
     def to_json(self, attrs=None):
         self.attrs = attrs
+        attr_list = {}
         if attrs is None:
             return self.__dict__
-        attr_list = {}
         for i in attrs:
             if i in self.__dict__:
-                attr_list[i] = self.__dict__
+                attr_list[i] = self.__dict__[i]
         return attr_list
