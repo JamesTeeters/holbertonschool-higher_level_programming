@@ -2,9 +2,6 @@
 """Almost a Circle"""
 
 
-from http.client import BadStatusLine
-
-
 class Base:
     """Making a class for Base Shapes"""
     __nb_objects = 0
