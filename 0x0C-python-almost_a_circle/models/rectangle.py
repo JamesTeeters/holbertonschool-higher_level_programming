@@ -73,6 +73,5 @@ class Rectangle(Base):
                 print("#", end='')
             print()
     def __str__(self):
-        """Rectangle Information"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format\
             (self.id, self.__x, self.__y, self.__height, self.__width)
