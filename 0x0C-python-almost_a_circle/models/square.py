@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Almost a circle"""
+
+
 from models.rectangle import Rectangle
 
 
@@ -25,9 +27,9 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """assign arguments to attributes"""
+        attr = ['id', 'size', 'x', 'y']
+        i = 0
         if args:
-            attr = ['id', 'size', 'x', 'y']
-            i = 0
             for arg in args:
                 setattr(self, attr[i], args[i])
                 i += 1

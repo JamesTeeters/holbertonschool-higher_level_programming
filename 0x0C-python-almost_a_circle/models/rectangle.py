@@ -51,7 +51,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
+        self.__x = value 
 
     @y.setter
     def y(self, value):
@@ -84,7 +84,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """add arguments"""
         attr = ['id', 'width', 'height', 'x', 'y']
-        i = 0
+        i = 1
         if args:
             for arg in args:
                 setattr(self, attr[i], args[i])
