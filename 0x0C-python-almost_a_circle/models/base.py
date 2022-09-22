@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Almost a Circle"""
 import json
+from re import L
 
 
 class Base:
@@ -17,7 +18,7 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """convert to json"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
