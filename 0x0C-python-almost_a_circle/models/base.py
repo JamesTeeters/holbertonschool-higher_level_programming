@@ -54,6 +54,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """return a list of all instances of subclasses"""
         filename = cls.__name__ + ".json"
         json_list = []
         if not filename:
