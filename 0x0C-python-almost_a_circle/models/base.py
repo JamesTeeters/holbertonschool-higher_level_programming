@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Almost a Circle"""
 import json
+from os.path import exists
 
 
 class Base:
@@ -57,7 +58,7 @@ class Base:
         """return a list of all instances of subclasses"""
         filename = cls.__name__ + ".json"
         json_list = []
-        if not filename:
+        if  not exists(filename):
             return []
         else:
             with open(filename, 'r') as f:
