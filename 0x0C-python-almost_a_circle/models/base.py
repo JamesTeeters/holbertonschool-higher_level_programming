@@ -38,16 +38,29 @@ class Base:
     def from_json_string(json_string):
         """list of json string representation"""
         if json_string is None or json_string == []:
-            return "[]"
+            return []
         else:
             return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
         """added and updated dummy values to subclasses"""
-        if cls.__name__ is "Square":
+        if cls.__name__ == "Square":
             dummy = cls(4)
-        if cls.__name__ is "Rectangle":
+        if cls.__name__ == "Rectangle":
             dummy = cls(4, 4)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        json_list = []
+        if not filename:
+            return []
+        else:
+            with open(filename, 'r') as f:
+                jason_list = cls.from_json_string(f.read())
+                for i, j in enumerate(json_list):
+                    json_list[i] = cls.create(**jason_list[i])
+                return jason_list
