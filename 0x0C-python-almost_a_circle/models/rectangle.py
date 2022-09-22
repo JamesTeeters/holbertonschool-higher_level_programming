@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Almost a Circle"""
-
 from models.base import Base
 
 
@@ -78,6 +77,15 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """Doc"""
+        """Return Rectangle information"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """add arguments"""
+        attr =['id', 'width', 'height', 'x', 'y']
+        i = 0
+        if args:
+            for arg in args:
+                setattr(self, attr[i], args[i])
+                i += 1
