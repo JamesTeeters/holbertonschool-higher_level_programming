@@ -51,7 +51,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value 
+        self.__x = value
 
     @y.setter
     def y(self, value):
@@ -92,3 +92,8 @@ class Rectangle(Base):
         if kwargs:
             for arg in kwargs:
                 setattr(self, arg, kwargs[arg])
+
+    def to_dictionary(self):
+        a = {'id': self.id, 'width': self.width,
+            'height': self.height, 'x': self.x, 'y': self.y}
+        return a
