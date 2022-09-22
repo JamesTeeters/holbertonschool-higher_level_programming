@@ -41,3 +41,13 @@ class Base:
             return "[]"
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """added and updated dummy values to subclasses"""
+        if cls.__name__ is "Square":
+            dummy = cls(4)
+        if cls.__name__ is "Rectangle":
+            dummy = cls(4, 4)
+        dummy.update(**dictionary)
+        return dummy
