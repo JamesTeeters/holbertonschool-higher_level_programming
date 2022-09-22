@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Almost a Circle"""
-from hashlib import new
 import json
-from re import L
 
 
 class Base:
