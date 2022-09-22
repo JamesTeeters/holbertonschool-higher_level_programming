@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Almost a Circle"""
+from hashlib import new
 import json
 from re import L
 
@@ -23,3 +24,13 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        json_list = []
+        filename = cls.__name__ + '.json'
+        if list_objs is not None:
+            for i in list_objs:
+                json_list.append(cls.to_dictionary(i))
+            with open(filename, 'w') as f:
+                f.write(cls.to_json_string(json_list))
