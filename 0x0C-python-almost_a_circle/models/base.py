@@ -61,8 +61,6 @@ class Base:
         try:
             with open(filename, 'r') as f:
                 jason_list = Base.from_json_string(f.read())
-                for i in enumerate(json_list):
-                    json_list[i] = cls.create(**jason_list[i])
-                return jason_list
+                return [cls.create(**d) for d in jason_list]
         except IOError:
             return []
