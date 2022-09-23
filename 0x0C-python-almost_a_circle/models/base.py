@@ -64,5 +64,5 @@ class Base:
                 for i in enumerate(json_list):
                     json_list[i] = cls.create(**jason_list[i])
                 return jason_list
-        except:
+        except IOError:
             return []
