@@ -59,7 +59,6 @@ class Base:
         filename = cls.__name__ + ".json"
         json_list = []
         try:
-            """checking for filename"""
             with open(filename, 'r') as f:
                 jason_list = cls.from_json_string(f.read())
                 for i in enumerate(json_list):
