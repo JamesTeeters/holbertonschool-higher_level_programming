@@ -57,7 +57,7 @@ class Base:
         """return a list of all instances of subclasses"""
         filename = cls.__name__ + ".json"
         json_list = []
-        if len(filename) == 0:
+        if not (filename):
             return []
         else:
             with open(filename, 'r') as f:
