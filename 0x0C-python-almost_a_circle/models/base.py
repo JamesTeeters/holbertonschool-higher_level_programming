@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Almost a Circle"""
 import json
-from os.path import exists
 
 
 class Base:
@@ -58,11 +57,11 @@ class Base:
         """return a list of all instances of subclasses"""
         filename = cls.__name__ + ".json"
         json_list = []
-        if  not exists(filename):
-            return []
-        else:
+        try:
             with open(filename, 'r') as f:
                 jason_list = cls.from_json_string(f.read())
                 for i, j in enumerate(json_list):
                     json_list[i] = cls.create(**jason_list[i])
                 return jason_list
+        except IOError:
+            return []
