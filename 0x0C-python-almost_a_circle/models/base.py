@@ -3,7 +3,6 @@
 import json
 
 
-
 class Base:
     """Making a class for Base Shapes"""
     __nb_objects = 0
@@ -58,7 +57,7 @@ class Base:
         """return a list of all instances of subclasses"""
         filename = cls.__name__ + ".json"
         json_list = []
-        if  len(filename) == 0:
+        if len(filename) == 0:
             return []
         else:
             with open(filename, 'r') as f:
