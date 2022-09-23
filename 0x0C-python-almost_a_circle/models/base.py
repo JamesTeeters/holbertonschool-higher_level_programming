@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 """Almost a Circle"""
-
-
 from ast import Try
-
-
 import json
 
 
