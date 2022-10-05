@@ -1,2 +1,5 @@
 -- groups
-SELECT score FROM second_table GROUP BY count(score) 'number'
+SELECT score , COUNT(score) 'number' 
+FROM second_table 
+GROUP BY score
+OREDER BY COUNT(score) DESC;
