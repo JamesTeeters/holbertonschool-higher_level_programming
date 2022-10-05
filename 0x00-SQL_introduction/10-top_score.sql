@@ -1,3 +1,3 @@
 -- show records of second_table
-SELECT * FROM second_table
-ORDER BY score, name
+SELECT score, name FROM second_table
+ORDER BY (score)
