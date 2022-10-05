@@ -1,4 +1,4 @@
 -- show records of second_table
-SELECT score, name
+SELECT *
 FROM second_table
-ORDER BY score
+ORDER BY score, name
