@@ -1,2 +1,2 @@
 -- groups
-FROM second_table GROUP BY score 'number'
+SELECT score FROM second_table GROUP BY score 'number'
