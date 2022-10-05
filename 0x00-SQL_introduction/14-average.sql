@@ -1,4 +1,2 @@
 -- Just Average
-INSERT INTO second_table (average)
-VALUES
-(SELECT AVG(score) From second_table)
+ALTER TABLE second_table ADD average SELECT AVG(score) From second_table
