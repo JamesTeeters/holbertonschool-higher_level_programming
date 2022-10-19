@@ -10,7 +10,7 @@ if __name__ == '__main__':
                                     db=sys.argv[3])
     cursor = db_connection.cursor()
     cursor.execute(
-        "SELECT * FROM states WHERE states.name BINARY LIKE 'N%' ORDER BY id ASC")
+        "SELECT * FROM states WHERE states.name LIKE 'N%' ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
