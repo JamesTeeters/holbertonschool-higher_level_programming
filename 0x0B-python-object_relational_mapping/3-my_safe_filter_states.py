@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""list all states starting with the letter N"""
+"""Filter states by input (SQL injection protected)"""
 import MySQLdb
 import sys
 
@@ -10,8 +10,8 @@ if __name__ == '__main__':
                                     db=sys.argv[3])
     cursor = db_connection.cursor()
     cursor.execute(
-        "SELECT * FROM states WHERE states.name LIKE BINARY\
-             '{}' ORDER BY id ASC".format(sys.argv[4]))
+        "SELECT * FROM states WHERE name=%s\
+             ORDER BY id ASC", {sys.argv[4]})
     rows = cursor.fetchall()
     for row in rows:
         print(row)
