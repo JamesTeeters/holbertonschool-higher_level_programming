@@ -10,8 +10,8 @@ if __name__ == '__main__':
                                     db=sys.argv[3])
     cursor = db_connection.cursor()
     cursor.execute("SELECT cities.name FROM cities\
-         INNER JOIN states ON cities.state_id=states.id\
-             and states.name=%s ORDER BY\
+          JOIN states ON cities.state_id=states.id\
+             WHERE states.name=%s ORDER BY\
                  cities.id ASC", {sys.arg[4]})
     rows = cursor.fetchall()
     cities = []
