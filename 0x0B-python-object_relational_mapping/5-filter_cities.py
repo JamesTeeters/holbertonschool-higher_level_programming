@@ -14,4 +14,5 @@ if __name__ == '__main__':
              LIKE %s ORDER BY cities.id", {sys.arg[4],})
     rows = cursor.fetchall()
     print(', '.join(row[0] for row in rows))
+    cursor.close()
     db_connection.close()
