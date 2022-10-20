@@ -24,12 +24,11 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    city_list = session.query(State, City).filter\
+    
+    cities = session.query(State, City).filter\
         (City.state_id == State.id).order_by\
             (City.id).all()
-            
-    for states, cities in city_list:
+    for city, state in cities:
         print('{}: ({}) {}'.format\
-            (states.name, cities.id, cities.name))
+            (state.name, city.id, city.name))
     session.close()
