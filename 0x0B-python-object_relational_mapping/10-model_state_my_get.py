@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-print the State with name given as INPUT
-using SQLAlchemy
-"""
+""" will you work now"""
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
