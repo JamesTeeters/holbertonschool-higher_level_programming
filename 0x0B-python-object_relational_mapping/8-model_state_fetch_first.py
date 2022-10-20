@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """print the first State Objects using SQLAlchemy"""
-from multiprocessing import pool
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
