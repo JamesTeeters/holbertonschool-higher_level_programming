@@ -3,7 +3,6 @@
 print the State Objects
 with name passed as argument using SQLAlchemy
 """
-from multiprocessing import pool
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -24,9 +23,9 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == state_name).all()
-    if state:
-        print('{}'.format(state.id))
+    states = session.query(State).filter(State.name == state_name).first()
+    if states:
+        print('{}'.format(states.id))
     else:
         print("Not found")
     session.close()
