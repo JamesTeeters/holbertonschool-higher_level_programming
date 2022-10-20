@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-print the State Objects
-with name passed as argument using SQLAlchemy
+print all states with name as input
+in SQLAlchemy
 """
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String
