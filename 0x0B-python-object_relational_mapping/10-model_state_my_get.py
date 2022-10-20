@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-print all states with name as input
-in SQLAlchemy
+print the State with name given as INPUT
+using SQLAlchemy
 """
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String
@@ -23,9 +23,10 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name == state_name).first()
+    states = session.query(State).filter(State.name == state_name).all()
     if states:
-        print(State.id)
+        for state in states:
+            print(State.id)
     else:
         print("Not found")
     session.close()
