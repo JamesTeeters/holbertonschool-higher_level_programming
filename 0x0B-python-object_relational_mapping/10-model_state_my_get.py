@@ -25,7 +25,7 @@ if __name__ == '__main__':
     session = Session()
     states = session.query(State).filter(State.name == state_name).first()
     if states:
-        print(State.id)
+        print(states.id)
     else:
         print("Not found")
     session.close()
