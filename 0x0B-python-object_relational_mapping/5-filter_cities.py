@@ -9,9 +9,9 @@ if __name__ == '__main__':
                                     passwd=sys.argv[2],
                                     db=sys.argv[3])
     cursor = db_connection.cursor()
-    cursor.execute("SELECT cities.name FROM cities JOIN states\
-         ON cities.state_id = states.id WHERE states.name\
-             LIKE %s ORDER BY cities.id", {sys.arg[4],})
+    cursor.execute("SELECT cities.name FROM cities INNER JOIN\
+         states ON cities.state_id=states.id\
+             and states.name=%s", {sys.argv[4]})
     rows = cursor.fetchall()
     print(', '.join(row[0] for row in rows))
     cursor.close()
