@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""stuff"""
+"""I don't like pep8"""
 import sys
 import urllib.request
 
