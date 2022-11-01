@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """Write a Python script that fetches https://intranet.hbtn.io/status"""
-import urllib.request
+from urllib import request
 
 
-rqst = urllib.request.Request("https://intranet.hbtn.io/status")
-with urllib.request.urlopen(rqst) as rcved:
-    url = rcved.read()
+with request.urlopen("https://intranet.hbtn.io/status") as f:
+    url = f.read()
     print("Body response:")
     print("\t- type: {}".format(type(url)))
     print("\t- content: {}".format(url))
